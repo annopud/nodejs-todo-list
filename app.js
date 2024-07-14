@@ -21,21 +21,10 @@ const port = process.env.PORT || 3000;
 // middleware
 app.use(cors());
 
-// Set EJS as the template engine
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
-// Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
-
 app.use(express.json());
 
 // routes
 app.use('/api/v1/todos', todoListRouter);
-
-app.get('/', (req, res) => {
-  res.render('index');
-});
 
 // error handling middleware
 app.use(notFound);

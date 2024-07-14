@@ -7,8 +7,7 @@
     "dev": "nodemon -e ejs,css ./app.js",
     "start": "node app.js",
     "test": "jest",
-    "test:watch": "jest --watchAll",
-    "build:css": "npx tailwindcss -i ./public/styles.css -o ./public/output.css --watch"
+    "test:watch": "jest --watchAll"
   },
   "author": "annopud",
   "license": "ISC",
